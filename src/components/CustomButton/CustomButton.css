@@ -1,0 +1,37 @@
+/* Base Layout - Temel Yerleşim */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Variant Management - Varyant Yönetimi */
+.btn[data-variant="primary"] {
+    background: #222222;
+    color: #fff;
+}
+.btn[data-variant="secondary"] {
+    background: #e3ebf7;
+    color: #1a202c;
+}
+.btn[data-variant="danger"] {
+    background: #ef4444;
+    color: #fff;
+}
+
+/* States - Durumlar */
+.btn:active {
+    transform: scale(0.97);
+}
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}

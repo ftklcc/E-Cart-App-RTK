@@ -1,0 +1,47 @@
+.alert {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid;
+    font-weight: 600;
+    transition: var(--transition);
+    z-index: 20;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(120%);
+}
+
+.alert.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.alert-success {
+    background-color: #065f46;
+    color: #ffffff;
+    border-left-color: #34d399;
+}
+
+.alert-info {
+    background-color: #1e40af;
+    color: #ffffff;
+    border-left-color: #60a5fa;
+}
+
+.alert-warning {
+    background-color: #92400e;
+    color: #ffffff;
+    border-left-color: #fbbf24;
+}
+
+.alert-error {
+    background-color: #991b1b;
+    color: #ffffff;
+    border-left-color: #f87171;
+}

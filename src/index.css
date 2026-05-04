@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    /* --- Temel Ölçüler & Geçişler --- */
+    --radius: 0.5rem;
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --glass-blur: 2px;
+
+    /* =========================
+       LIGHT THEME (Aydınlık)
+    ========================= */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    --bg-body: #f8fafc;
+    --bg-surface: rgba(255, 255, 255, 0.8);
+    --bg-card: #ffffff;
+    --bg-header: rgba(255, 255, 255, 0.7);
+
+    --border-color: #e2e8f0;
+    --border-soft: #f1f5f9;
+
+    /* GENİŞLETİLMİŞ AKSİYON RENKLERİ (Light) */
+    --blue: #3b82f6;
+    --blue-light: #eff6ff;
+
+    --green: #10b981;
+    --green-light: #ecfdf5;
+
+    --red: #ef4444;
+    --red-light: #fef2f2;
+
+    --orange: #f59e0b;
+    --orange-light: #fffbeb;
+
+    --purple: #8b5cf6;
+    --purple-light: #f5f3ff;
+
+    --pink: #ec4899;
+    --pink-light: #fdf2f8;
+
+    --color-white: #fff;
+
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.096);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   LIGHT THEME OVERRIDE
+========================= */
+
+[data-theme="dark"] {
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --bg-body: #0b0f17; /* Orijinal derin koyu */
+    --bg-surface: rgba(30, 41, 59, 0.4);
+    --bg-card: #161b26;
+    --bg-header: rgba(15, 20, 30, 0.8);
+
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-soft: rgba(255, 255, 255, 0.03);
+
+    /* GENİŞLETİLMİŞ AKSİYON RENKLERİ (Dark - Daha Canlı/Neon) */
+    --blue: #60a5fa;
+    --blue-light: rgba(96, 165, 250, 0.15);
+
+    --green: #34d399;
+    --green-light: rgba(52, 211, 153, 0.15);
+
+    --red: #f87171;
+    --red-light: rgba(248, 113, 113, 0.15);
+
+    --orange: #fbbf24;
+    --orange-light: rgba(251, 191, 36, 0.15);
+
+    --purple: #a78bfa;
+    --purple-light: rgba(167, 139, 250, 0.15);
+
+    --pink: #f472b6;
+    --pink-light: rgba(244, 114, 182, 0.15);
+
+    --color-white: #0f172a;
+
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --shadow-md: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    width: 100%;
+    min-height: 100vh;
+}
+
+main,
+.mx {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+.underline {
+    width: 100%;
+    height: 2px;
+    background: var(--text-main);
+    opacity: 0.2;
+    margin: 1rem 0;
+}
+
+/* LOADİNG UTİLİTY */
+.loading__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.loading {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    border-bottom-color: #ff3d00;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,77 @@
+/* Sidebar Ana Kutusu */
+.sidebar {
+    position: sticky;
+    top: 90px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1.5px solid var(--glass-border);
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: var(--glass-bg);
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-input:focus {
+    background-color: var(--bg-card);
+    border-color: var(--blue);
+    box-shadow: var(--shadow-md);
+    outline: none;
+}
+
+.filter-label,
+.filter-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 0.5rem;
+}
+
+/* Kategori Listesi */
+.category-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-item {
+    padding: 0.6rem 1rem;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.2s ease;
+    text-transform: capitalize;
+}
+
+.category-item:hover,
+.category-item.active {
+    background-color: var(--glass-bg);
+    color: var(--orange);
+    font-weight: 600;
+}
+
+/* Select Kutusu */
+.sort-select {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid var(--glass-border);
+    border-radius: 10px;
+    background-color: var(--bg-card);
+    cursor: pointer;
+    color: var(--text-primary);
+}

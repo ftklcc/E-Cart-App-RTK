@@ -1,0 +1,189 @@
+/* --- Global Header & Nav --- */
+.header {
+    width: 100%;
+    background: var(--bg-header);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    transition: all 0.3s ease;
+}
+
+/* --- Logo --- */
+.nav__logo {
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav__logo h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+}
+
+/* --- Links (Desktop) --- */
+.links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav__link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav__link:hover,
+.nav__link.active {
+    color: var(--orange);
+}
+.nav__link::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -15px;
+    top: 5px;
+    background: var(--orange);
+    transition: var(--transition);
+    opacity: 0;
+}
+.nav__link:hover:before {
+    opacity: 1;
+}
+
+.nav__link.active::before {
+    opacity: 1;
+}
+
+/* --- Actions (Theme & Cart) --- */
+.nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.theme-btn,
+.nav__cart {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.nav__cart {
+    width: auto;
+    padding: 0 12px;
+    gap: 8px;
+    position: relative;
+}
+
+.cart-badge {
+    background: var(--orange);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* --- Hamburger Menu (Default Hidden) --- */
+.hamburger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger svg {
+    position: absolute;
+    font-size: 1.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    color: var(--text-primary);
+}
+
+.icon-close {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-90deg) !important;
+}
+.hamburger.active .icon-menu {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+.hamburger.active .icon-close {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0) !important;
+}
+
+/* --- Mobile Styling  */
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .nav__logo {
+        order: 1;
+    }
+    .nav__actions {
+        order: 2;
+    }
+
+    .links__container {
+        order: 3;
+        width: 100%;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+        position: static;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 0;
+        padding-top: 1rem;
+    }
+
+    .nav__link {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+        border-top: 1px solid var(--border-color-soft);
+    }
+    .nav__link::before {
+        left: -5px;
+        top: 22px;
+    }
+
+    .hamburger {
+        display: flex;
+        order: 3;
+        /* margin-left: 5px; */
+    }
+}
