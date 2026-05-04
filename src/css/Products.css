@@ -98,14 +98,14 @@
 /* Tablet */
 @media (max-width: 1024px) {
     .products {
-        grid-template-columns: 180px minmax(0, 1fr);
-        gap: 20px;
-        padding: 16px;
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 1rem;
+        padding: 1rem;
     }
 
     .products__container {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 16px;
+        gap: 1rem;
     }
 
     .product__card {
@@ -130,6 +130,8 @@
 
     .product__title {
         padding: 1rem;
+        font-size: 14px;
+        opacity: 0.8;
     }
 
     /* Hover yerine always-visible button (mobilde hover yok) */
@@ -138,6 +140,7 @@
         transform: none;
         pointer-events: auto;
         margin: 0 1rem 1rem 1rem;
+        font-size: 12px;
     }
 }
 /* Small phones */
