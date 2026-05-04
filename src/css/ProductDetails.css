@@ -105,7 +105,9 @@
         justify-content: center;
         flex-direction: column;
     }
-
+    .details__thumbs {
+        justify-content: center;
+    }
     .details__img img {
         width: 100%;
         max-width: 400px;
@@ -124,9 +126,6 @@
         padding: 0.8rem;
     }
 
-    .details__thumbs {
-        justify-content: center;
-    }
     .details__thumbs img {
         flex: 0 0 auto;
         width: 55px;
