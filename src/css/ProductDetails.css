@@ -20,8 +20,10 @@
     max-width: 500px;
     border-radius: var(--radius);
 }
-.details__thumbs img {
-    margin-right: 5px;
+.details__thumbs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .details__thumbs img {
     width: 70px;
@@ -123,11 +125,8 @@
     }
 
     .details__thumbs {
-        overflow-x: auto;
-        gap: 8px;
-        padding-bottom: 6px;
+        justify-content: center;
     }
-
     .details__thumbs img {
         flex: 0 0 auto;
         width: 55px;
