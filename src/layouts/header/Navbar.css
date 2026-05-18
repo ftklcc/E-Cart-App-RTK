@@ -2,8 +2,8 @@
 .header {
     width: 100%;
     background: var(--bg-header);
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
